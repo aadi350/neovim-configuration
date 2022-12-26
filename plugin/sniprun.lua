@@ -1,3 +1,5 @@
+-- https://github.com/michaelb/sniprun
+
 require'sniprun'.setup({
-  display = { "Classic" },
+  display = { "VirtualText" },
 })

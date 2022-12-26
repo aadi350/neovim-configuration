@@ -9,5 +9,5 @@ require "lsp.lsp"
 
 require "plugins.packer"
 
-vim.opt.termguicolors = true
+vim.opt.termguicolors = false 
 require("bufferline").setup{}

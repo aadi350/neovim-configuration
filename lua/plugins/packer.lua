@@ -12,6 +12,7 @@ return require('packer').startup(function()
     --markdown runner
 	use 'gpanders/vim-medieval'
     use { 'michaelb/sniprun', run = 'bash ./install.sh'}
+	use 'rcarriga/nvim-notify'
 
 	-- nvim LSP configs
 	use 'neovim/nvim-lspconfig'
@@ -27,6 +28,8 @@ return require('packer').startup(function()
 	use 'hrsh7th/cmp-path'
 	use 'hrsh7th/cmp-cmdline'
 	use 'hrsh7th/nvim-cmp'
+
+	use 'SirVer/ultisnips'
 
     -- Lua snippet engine (primarily to fufill requirements in hrsh7th/nvim-cmp)
 	use 'L3MON4D3/LuaSnip'
@@ -66,6 +69,7 @@ return require('packer').startup(function()
 	}
 
 	--cool comments
+	use 'tpope/vim-commentary'
 	use 'scrooloose/syntastic'
 
 	--deoplete
