@@ -56,7 +56,9 @@ return require('packer').startup(function()
 		requires = { {'nvim-lua/plenary.nvim'} }
 	}
 
-	--Use fzf native for telescope
+	--Use fzf native for telescope-fzf-native	
+	use { 'junegunn/fzf', run = ":call fzf#install()" }
+    use { 'junegunn/fzf.vim' }
 	use {'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
 	
 	-- nvim file tree. Alternative to NerdTree
@@ -65,7 +67,7 @@ return require('packer').startup(function()
 		requires = {
 			'kyazdani42/nvim-web-devicons', -- optional, for file icon
 		},
-		config = function() require'nvim-tree'.setup {} end
+		config = function() require'nvim-tree'.setup { view = {relativenumber = true}} end
 	}
 
 	--cool comments
