@@ -12,7 +12,24 @@ return require('packer').startup(function()
     --markdown runner
 	use 'gpanders/vim-medieval'
     use { 'michaelb/sniprun', run = 'bash ./install.sh'}
+	use { 'dccsillag/magma-nvim', run = ':UpdateRemotePlugins' }
 	use 'rcarriga/nvim-notify'
+
+    use 'yamatsum/nvim-cursorline' 
+	use {'edluffy/hologram.nvim'}
+	--vim slime
+	use 'jpalardy/vim-slime'
+
+	--runner h
+    use { 'CRAG666/code_runner.nvim', requires = 'nvim-lua/plenary.nvim' }
+	use 'MunifTanjim/nui.nvim'
+	use 'smzm/hydrovim'
+
+	-- another REPL runner
+	-- NOT COMPATIBLE WITH NEOVIM
+	-- use  'sillybun/vim-repl'
+	use 'tpope/vim-repeat'
+	use 'pappasam/nvim-repl'
 
 	-- nvim LSP configs
 	use 'neovim/nvim-lspconfig'
@@ -21,6 +38,9 @@ return require('packer').startup(function()
     --airline
 	use 'vim-airline/vim-airline'
 	use 'vim-airline/vim-airline-themes'
+
+	--colorschemes
+	use 'shaunsingh/nord.nvim'
 
     -- Completions engine
 	use 'hrsh7th/cmp-nvim-lsp'

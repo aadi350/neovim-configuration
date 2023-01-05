@@ -10,5 +10,11 @@ vim.o.smartindent = true
 
 vim.o.ignorecase = true 
 
+vim.g.shiftwidth = 4
+
+--sinprun
+vim.g.shiftwidth = 4		
+vim.g.python3_host_prog = '/home/aadi/miniconda3/bin/python'
+vim.g.python_host_prog = '/home/aadi/miniconda3/bin/python'
 
 

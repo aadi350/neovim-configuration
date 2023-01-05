@@ -1,13 +1,15 @@
--- use Space as leader
-vim.g.mapleader = " "
+-- -- use Space as leader
+-- vim.g.mapleader = "\\"
+
 
 -- Setup globals
-require "globals.options"
 require "globals.remaps"
+require "globals.options"
 
 require "lsp.lsp"
 
 require "plugins.packer"
 
-vim.opt.termguicolors = false 
 require("bufferline").setup{}
+
+vim.g.shell = "/usr/bin/zsh"
