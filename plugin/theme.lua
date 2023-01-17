@@ -18,4 +18,4 @@ require('lualine').setup {
   }
 }
 
-vim.cmd('colorscheme tokyonight')
+vim.cmd('colorscheme catppuccin-mocha')

@@ -50,3 +50,7 @@ vim.keymap.set('n', '<leader>ff', builtin.find_files, {})
 vim.keymap.set('n', '<leader>fg', builtin.live_grep, {})
 vim.keymap.set('n', '<leader>fb', builtin.buffers, {})
 vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})
+
+--Goyo
+vim.api.nvim_set_keymap('n', '<F9>', ':Goyo<CR>', options)
+vim.api.nvim_set_keymap('n', '<Leader><F9><CR>', ':Goyo', options)

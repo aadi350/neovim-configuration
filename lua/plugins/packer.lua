@@ -9,6 +9,8 @@ return require('packer').startup(function()
 	-- Packer just manages itself
 	use 'wbthomason/packer.nvim'
 
+	use 'junegunn/goyo.vim'
+	
     --markdown runner
 	use 'gpanders/vim-medieval'
     use { 'michaelb/sniprun', run = 'bash ./install.sh'}
@@ -24,6 +26,8 @@ return require('packer').startup(function()
     use { 'CRAG666/code_runner.nvim', requires = 'nvim-lua/plenary.nvim' }
 	use 'MunifTanjim/nui.nvim'
 	use 'smzm/hydrovim'
+
+	use { "catppuccin/nvim", as = "catppuccin" }
 
 	-- another REPL runner
 	-- NOT COMPATIBLE WITH NEOVIM
@@ -139,6 +143,8 @@ return require('packer').startup(function()
 			require'alpha'.setup(require'alpha.themes.theta'.config)
 		end
 	}
+	-- comfortable scrolling
+	use 'yuttie/comfortable-motion.vim'
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins
 	if packer_bootstrap then
