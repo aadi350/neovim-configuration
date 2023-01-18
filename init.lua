@@ -4,7 +4,6 @@
 
 -- Setup globals
 require "globals.remaps"
-require "globals.options"
 
 require "lsp.lsp"
 
@@ -14,11 +13,15 @@ require("bufferline").setup{}
 
 vim.g.shell = "/usr/bin/zsh"
 
+require "globals.options"
 vim.api.nvim_create_autocmd({"BufNewFile", "BufRead"}, {
   pattern = {"*.vpm"},
   callback = function()
-    vim.cmd[[Goyo]]
+	if vim.fn.exists('g:Goyo') == 0 then
+	   vim.cmd[[Goyo]]
+	end
 	vim.g.shiftwidth = 4
 	vim.g.ft=python
   end
 })
+
