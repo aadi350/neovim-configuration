@@ -52,5 +52,5 @@ vim.keymap.set('n', '<leader>fb', builtin.buffers, {})
 vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})
 
 --Goyo
-vim.api.nvim_set_keymap('n', '<F9>', ':Goyo<CR>', options)
-vim.api.nvim_set_keymap('n', '<Leader><F9><CR>', ':Goyo', options)
+vim.api.nvim_set_keymap('n', '<F9>', ':Goyo<CR>', {})
+vim.api.nvim_set_keymap('n', '<F10>', ':set ft=python<CR>', {})

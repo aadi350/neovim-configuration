@@ -14,14 +14,16 @@ require("bufferline").setup{}
 vim.g.shell = "/usr/bin/zsh"
 
 require "globals.options"
-vim.api.nvim_create_autocmd({"BufNewFile", "BufRead"}, {
-  pattern = {"*.vpm"},
-  callback = function()
-	if vim.fn.exists('g:Goyo') == 0 then
-	   vim.cmd[[Goyo]]
-	end
-	vim.g.shiftwidth = 4
-	vim.g.ft=python
-  end
-})
 
+function save_view()
+    vim.api.nvim_command('mkview')
+end
+
+vim.api.nvim_command('au BufWritePost * lua save_view()')
+
+function load_view()
+    vim.api.nvim_command('loadview')
+end
+
+vim.api.nvim_command('au BufReadPost * lua load_view()')
+vim.cmd[[colorscheme tokyonight]]
